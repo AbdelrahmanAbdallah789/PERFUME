@@ -1,0 +1,18 @@
+import { useSelector } from "react-redux";
+
+const FavoritesCount = () => {
+  const favorites = useSelector((state) => state.favorites);
+  const favoriteCount = favorites.length;
+
+  return (
+    <div className="absolute -top-2 left-24">
+      {favoriteCount > 0 && (
+        <span className="px-1 py-0 text-sm text-white bg-[#151515] rounded-full">
+          {favoriteCount}
+        </span>
+      )}
+    </div>
+  );
+};
+
+export default FavoritesCount;
