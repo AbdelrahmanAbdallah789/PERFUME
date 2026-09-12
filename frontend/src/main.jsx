@@ -10,7 +10,7 @@ import PrivateRoute from "./components/PrivateRoute";
 
 // Auth
 import Login from "./pages/auth/Login.jsx";
-import Signup from "./pages/Auth/Signup.jsx";
+import Signup from "./pages/auth/Signup.jsx";
 
 import AdminRoute from "./pages/Admin/AdminRoute";
 import Profile from "./pages/users/Profile.jsx";
