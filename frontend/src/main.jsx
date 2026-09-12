@@ -15,13 +15,13 @@ import Signup from "./pages/auth/Signup.jsx";
 import AdminRoute from "./pages/admin/AdminRoute";
 import Profile from "./pages/users/Profile.jsx";
 import UserOrder from "./pages/users/UserOrder.jsx"
-import UserList from "./pages/Admin/UserList";
+import UserList from "./pages/admin/UserList";
 
-import CategoryList from "./pages/Admin/CategoryList";
+import CategoryList from "./pages/admin/CategoryList";
 
-import ProductList from "./pages/Admin/ProductList";
-import AllProducts from "./pages/Admin/AllProducts";
-import ProductUpdate from "./pages/Admin/ProductUpdate";
+import ProductList from "./pages/admin/ProductList";
+import AllProducts from "./pages/admin/AllProducts";
+import ProductUpdate from "./pages/admin/ProductUpdate";
 
 import Home from "./pages/Home.jsx";
 import Favorites from "./pages/Products/Favorites.jsx";
@@ -33,9 +33,9 @@ import Shop from "./pages/Shop.jsx";
 import Shipping from "./pages/Orders/Shipping.jsx";
 import PlaceOrder from "./pages/Orders/PlaceOrder.jsx";
 import Order from "./pages/Orders/Order.jsx";
-import OrderList from "./pages/Admin/OrderList.jsx";
+import OrderList from "./pages/admin/OrderList.jsx";
 import { PayPalScriptProvider } from "@paypal/react-paypal-js";
-import AdminDashboard from "./pages/Admin/AdminDashboard.jsx";
+import AdminDashboard from "./pages/admin/AdminDashboard.jsx";
 
 
 const router = createBrowserRouter(
