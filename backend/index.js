@@ -17,10 +17,7 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(cookieParser());
  app.use(cors({
-    origin: function (origin, callback) {
-      // This allows any origin to connect, while still supporting credentials/cookies
-      callback(null, true);
-    },
+    origin: process.env.FRONTEND_URL || "http://localhost:5173",
     credentials: true
   }));
 app.use("/api/users", userRoutes);
@@ -29,7 +26,10 @@ app.use("/api/products", productRoutes);
 app.use("/api/uploads", uploadRoutes);
 app.use("/api/orders", orderRoutes);
 
-
+app.use(cors({
+  origin: process.env.FRONTEND_URL || "http://localhost:5173",
+  credentials: true
+}));
 
 app.get("/api/config/paypal", (req, res) => {
   res.send({clientId:process.env.PAYPAL_CLIENT_ID});
