@@ -24,7 +24,7 @@ app.use("/api/orders", orderRoutes);
 
 
 app.use(cors({
-    origin: ["https://perfume-frontend-pi.vercel.app"], // You will update this after deploying frontend
+    origin: ["https://perfume-frontend-git-main-abdelrahmans-projects-3f1c9a3a.vercel.app"], // You will update this after deploying frontend
     methods: ["POST", "GET", "PUT", "DELETE"],
     credentials: true
 }));
