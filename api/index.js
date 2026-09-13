@@ -2,6 +2,7 @@ import path from "path";
 import express from "express";
 import dotenv from "dotenv";
 import cookieParser from "cookie-parser";
+import cors from "cors"
 import connectDB from "./config/db.js";
 import userRoutes from "./routes/userRoutes.js";
 import categoryRoutes from "./routes/categoryRoutes.js";
@@ -21,7 +22,10 @@ app.use("/api/products", productRoutes);
 app.use("/api/uploads", uploadRoutes);
 app.use("/api/orders", orderRoutes);
 
-
+app.use(cors({
+  origin: process.env.FRONTEND_URL || "https://perfume-frontend-qvta67dtd-abdelrahmans-projects-3f1c9a3a.vercel.aphttps://perfume-frontend-two.vercel.app",
+  credentials: true
+}));
 
 app.get("/api/config/paypal", (req, res) => {
   res.send({clientId:process.env.PAYPAL_CLIENT_ID});
