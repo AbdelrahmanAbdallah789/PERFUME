@@ -23,7 +23,7 @@ app.use("/api/uploads", uploadRoutes);
 app.use("/api/orders", orderRoutes);
 
 app.use(cors({
-  origin: process.env.FRONTEND_URL || "https://perfume-h8om.vercel.app",
+  origin: process.env.FRONTEND_URL || "https://localhost:5173",
   credentials: true
 }));
 

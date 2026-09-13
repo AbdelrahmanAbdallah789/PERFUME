@@ -7,8 +7,8 @@ export default defineConfig({
   plugins: [react()],
   server: {
     proxy: {
-      "/api/": "http://localhost:5000",
-      "/uploads/": "http://localhost:5000",
+      "/api/": "https://perfume-h8om.vercel.app",
+      "/uploads/": "https://perfume-h8om.vercel.app",
     },
   },
 });
