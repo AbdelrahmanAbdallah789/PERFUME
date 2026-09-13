@@ -1,7 +1,7 @@
 {
   "name": "raman",
   "version": "1.0.0",
-  "main": "index.js",
+  "main": "backend/index.js",
   "type": "module",
   "scripts": {
     "backend": "nodemon backend/index.js",
