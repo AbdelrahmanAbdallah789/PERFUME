@@ -37,8 +37,8 @@ const __dirname = path.resolve();
 app.use("/uploads", express.static(path.join(__dirname + "/uploads")));
 
 if (process.env.NODE_ENV === 'true') {
-  const PORT = 5000;
-  app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
+  const port = 5000;
+  app.listen(port, () => console.log(`Server running on port ${port}`));
 }
 
 module.exports = app; 
