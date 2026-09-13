@@ -22,9 +22,11 @@ app.use("/api/products", productRoutes);
 app.use("/api/uploads", uploadRoutes);
 app.use("/api/orders", orderRoutes);
 
+const cors = require('cors');
 app.use(cors({
-  origin: process.env.FRONTEND_URL || "http://localhost:5173",
-  credentials: true
+    origin: ["https://your-frontend-domain.vercel.app"], // You will update this after deploying frontend
+    methods: ["POST", "GET", "PUT", "DELETE"],
+    credentials: true
 }));
 
 app.get("/api/config/paypal", (req, res) => {
