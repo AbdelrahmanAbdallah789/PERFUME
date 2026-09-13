@@ -22,7 +22,7 @@ app.use("/api/products", productRoutes);
 app.use("/api/uploads", uploadRoutes);
 app.use("/api/orders", orderRoutes);
 
-const cors = require('cors');
+
 app.use(cors({
     origin: ["https://your-frontend-domain.vercel.app"], // You will update this after deploying frontend
     methods: ["POST", "GET", "PUT", "DELETE"],
