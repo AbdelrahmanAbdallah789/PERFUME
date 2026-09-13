@@ -17,7 +17,7 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(cookieParser());
  app.use(cors({
-    origin: "https://perfume-h8om.vercel.app",
+    origin: "https://https://perfume-h8om-git-main-abdelrahmans-projects-3f1c9a3a.vercel.app",
     credentials: true
   }));
 app.use("/api/users", userRoutes);
