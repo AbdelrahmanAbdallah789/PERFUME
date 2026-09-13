@@ -23,7 +23,7 @@ app.use("/api/uploads", uploadRoutes);
 app.use("/api/orders", orderRoutes);
 
 app.use(cors({
-  origin: process.env.FRONTEND_URL || "http://localhost:5173",
+  origin: process.env.FRONTEND_URL || "https://perfume-frontend-qvta67dtd-abdelrahmans-projects-3f1c9a3a.vercel.app",
   credentials: true
 }));
 
