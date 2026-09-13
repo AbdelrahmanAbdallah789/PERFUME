@@ -23,7 +23,7 @@ app.use("/api/uploads", uploadRoutes);
 app.use("/api/orders", orderRoutes);
 
 app.use(cors({
-  origin: process.env.FRONTEND_URL || "https://perfume-frontend-qvta67dtd-abdelrahmans-projects-3f1c9a3a.vercel.aphttps://perfume-frontend-two.vercel.app",
+  origin: process.env.VITE_API_URL || "http://localhost:5173",
   credentials: true
 }));
 
@@ -34,7 +34,6 @@ app.get("/api/config/paypal", (req, res) => {
 const __dirname = path.resolve();
 app.use("/uploads", express.static(path.join(__dirname + "/uploads")));
 
-if (process.env.NODE_ENV !== 'production') {
-  app.listen(port, () => console.log(`server running on port ${port}`));
-}
-export default app;
+app.listen(port, () => console.log(`server running on port ${port}`));
+
+export default app
