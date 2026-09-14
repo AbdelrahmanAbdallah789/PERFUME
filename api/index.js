@@ -22,7 +22,9 @@ app.use("/api/products", productRoutes);
 app.use("/api/uploads", uploadRoutes);
 app.use("/api/orders", orderRoutes);
 
-
+app.get('/', (req, res) => {
+  res.send('Server is running successfully!');
+});
 // app.use(cors({
 //     origin: "https://perfume-frontend-sand.vercel.app", // You will update this after deploying frontend
 //     credentials: true
