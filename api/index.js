@@ -23,10 +23,10 @@ app.use("/api/uploads", uploadRoutes);
 app.use("/api/orders", orderRoutes);
 
 
-app.use(cors({
-    origin: "https://perfume-frontend-sand.vercel.app", // You will update this after deploying frontend
-    credentials: true
-}));
+// app.use(cors({
+//     origin: "https://perfume-frontend-sand.vercel.app", // You will update this after deploying frontend
+//     credentials: true
+// }));
 
 app.get("/api/config/paypal", (req, res) => {
   res.send({clientId:process.env.PAYPAL_CLIENT_ID});
